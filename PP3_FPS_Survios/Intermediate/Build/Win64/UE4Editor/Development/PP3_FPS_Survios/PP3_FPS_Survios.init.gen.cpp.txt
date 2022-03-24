@@ -1,0 +1,3 @@
+C:\Users\charb\Desktop\College\Portfolio-Projects\PP3_FPS_Survios\Intermediate\Build\Win64\UE4Editor\Development\PP3_FPS_Survios\Definitions.PP3_FPS_Survios.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h

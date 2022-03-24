@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "PP3_FPS_Survios",
+			"Path": "C:\\Users\\charb\\Desktop\\College\\Portfolio-Projects\\PP3_FPS_Survios\\Source\\PP3_FPS_Survios.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "PP3_FPS_SurviosEditor",
+			"Path": "C:\\Users\\charb\\Desktop\\College\\Portfolio-Projects\\PP3_FPS_Survios\\Source\\PP3_FPS_SurviosEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
