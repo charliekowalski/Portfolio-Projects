@@ -20,12 +20,14 @@ struct FHitResult;
 #define PP3_FPS_Survios_Source_PP3_FPS_Survios_PP3_FPS_SurviosProjectile_h_15_SPARSE_DATA
 #define PP3_FPS_Survios_Source_PP3_FPS_Survios_PP3_FPS_SurviosProjectile_h_15_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execOnHit);
+	DECLARE_FUNCTION(execOnHit); \
+	DECLARE_FUNCTION(execSpawnsPosion);
 
 
 #define PP3_FPS_Survios_Source_PP3_FPS_Survios_PP3_FPS_SurviosProjectile_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execOnHit);
+	DECLARE_FUNCTION(execOnHit); \
+	DECLARE_FUNCTION(execSpawnsPosion);
 
 
 #define PP3_FPS_Survios_Source_PP3_FPS_Survios_PP3_FPS_SurviosProjectile_h_15_INCLASS_NO_PURE_DECLS \

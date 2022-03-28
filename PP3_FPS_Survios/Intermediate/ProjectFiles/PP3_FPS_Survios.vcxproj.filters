@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\PP3_FPS_Survios.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{8C525AA6-4F02-46DA-882E-3AD8F6476037}</UniqueIdentifier>
+      <UniqueIdentifier>{D2F24E4D-7C8B-40A3-AB80-12DEF6E4609F}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\PP3_FPS_Survios.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{69283F75-CE2C-4144-B823-923A7AC1E764}</UniqueIdentifier>
+      <UniqueIdentifier>{330BF68E-483B-4B58-A818-B1DA1455A2DE}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,8 +30,14 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\PP3_FPS_Survios">
-      <UniqueIdentifier>{824B00E0-0588-451F-A674-9599D33EDF14}</UniqueIdentifier>
+      <UniqueIdentifier>{8CF0AB26-AEBC-4E34-BC25-3FBEED250135}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\PP3_FPS_Survios\FloorPoison.cpp">
+      <Filter>Source\PP3_FPS_Survios</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PP3_FPS_Survios\FloorPoison.h">
+      <Filter>Source\PP3_FPS_Survios</Filter>
+    </ClInclude>
     <None Include="..\..\Source\PP3_FPS_Survios\PP3_FPS_Survios.Build.cs">
       <Filter>Source\PP3_FPS_Survios</Filter>
     </None>

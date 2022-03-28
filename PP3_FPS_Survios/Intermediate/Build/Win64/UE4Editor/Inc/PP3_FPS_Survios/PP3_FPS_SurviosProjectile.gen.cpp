@@ -36,11 +36,20 @@ void EmptyLinkFunctionForGeneratedCodePP3_FPS_SurviosProjectile() {}
 		P_THIS->OnHit(Z_Param_HitComp,Z_Param_OtherActor,Z_Param_OtherComp,Z_Param_NormalImpulse,Z_Param_Out_Hit);
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(APP3_FPS_SurviosProjectile::execSpawnsPosion)
+	{
+		P_GET_STRUCT_REF(FHitResult,Z_Param_Out_Hit);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SpawnsPosion(Z_Param_Out_Hit);
+		P_NATIVE_END;
+	}
 	void APP3_FPS_SurviosProjectile::StaticRegisterNativesAPP3_FPS_SurviosProjectile()
 	{
 		UClass* Class = APP3_FPS_SurviosProjectile::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "OnHit", &APP3_FPS_SurviosProjectile::execOnHit },
+			{ "SpawnsPosion", &APP3_FPS_SurviosProjectile::execSpawnsPosion },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -118,6 +127,46 @@ void EmptyLinkFunctionForGeneratedCodePP3_FPS_SurviosProjectile() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_APP3_FPS_SurviosProjectile_SpawnsPosion_Statics
+	{
+		struct PP3_FPS_SurviosProjectile_eventSpawnsPosion_Parms
+		{
+			FHitResult Hit;
+		};
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Hit_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_Hit;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APP3_FPS_SurviosProjectile_SpawnsPosion_Statics::NewProp_Hit_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_APP3_FPS_SurviosProjectile_SpawnsPosion_Statics::NewProp_Hit = { "Hit", nullptr, (EPropertyFlags)0x0010008008000182, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(PP3_FPS_SurviosProjectile_eventSpawnsPosion_Parms, Hit), Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(Z_Construct_UFunction_APP3_FPS_SurviosProjectile_SpawnsPosion_Statics::NewProp_Hit_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_APP3_FPS_SurviosProjectile_SpawnsPosion_Statics::NewProp_Hit_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_APP3_FPS_SurviosProjectile_SpawnsPosion_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APP3_FPS_SurviosProjectile_SpawnsPosion_Statics::NewProp_Hit,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APP3_FPS_SurviosProjectile_SpawnsPosion_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "PP3_FPS_SurviosProjectile.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_APP3_FPS_SurviosProjectile_SpawnsPosion_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APP3_FPS_SurviosProjectile, nullptr, "SpawnsPosion", nullptr, nullptr, sizeof(PP3_FPS_SurviosProjectile_eventSpawnsPosion_Parms), Z_Construct_UFunction_APP3_FPS_SurviosProjectile_SpawnsPosion_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APP3_FPS_SurviosProjectile_SpawnsPosion_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00420401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_APP3_FPS_SurviosProjectile_SpawnsPosion_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_APP3_FPS_SurviosProjectile_SpawnsPosion_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_APP3_FPS_SurviosProjectile_SpawnsPosion()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_APP3_FPS_SurviosProjectile_SpawnsPosion_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	UClass* Z_Construct_UClass_APP3_FPS_SurviosProjectile_NoRegister()
 	{
 		return APP3_FPS_SurviosProjectile::StaticClass();
@@ -147,6 +196,7 @@ void EmptyLinkFunctionForGeneratedCodePP3_FPS_SurviosProjectile() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_APP3_FPS_SurviosProjectile_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_APP3_FPS_SurviosProjectile_OnHit, "OnHit" }, // 4185712458
+		{ &Z_Construct_UFunction_APP3_FPS_SurviosProjectile_SpawnsPosion, "SpawnsPosion" }, // 1699649647
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APP3_FPS_SurviosProjectile_Statics::Class_MetaDataParams[] = {
@@ -206,7 +256,7 @@ void EmptyLinkFunctionForGeneratedCodePP3_FPS_SurviosProjectile() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APP3_FPS_SurviosProjectile, 1637453892);
+	IMPLEMENT_CLASS(APP3_FPS_SurviosProjectile, 1670986693);
 	template<> PP3_FPS_SURVIOS_API UClass* StaticClass<APP3_FPS_SurviosProjectile>()
 	{
 		return APP3_FPS_SurviosProjectile::StaticClass();

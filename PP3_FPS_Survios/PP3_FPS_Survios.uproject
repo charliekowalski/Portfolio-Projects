@@ -7,7 +7,10 @@
 		{
 			"Name": "PP3_FPS_Survios",
 			"Type": "Runtime",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine"
+			]
 		}
 	]
 }
