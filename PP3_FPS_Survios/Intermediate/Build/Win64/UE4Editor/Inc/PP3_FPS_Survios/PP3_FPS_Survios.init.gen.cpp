@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodePP3_FPS_Survios_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0xB4959F3E,
+				0x632B4B83,
 				0x43F21A7F,
 				METADATA_PARAMS(nullptr, 0)
 			};

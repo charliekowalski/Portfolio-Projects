@@ -25,8 +25,6 @@ class APP3_FPS_SurviosProjectile : public AActor
 public:
 	APP3_FPS_SurviosProjectile();
 
-	UFUNCTION()
-
 	/** called when projectile hits something */
 	UFUNCTION()
 	void OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
