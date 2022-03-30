@@ -82,6 +82,8 @@ APP3_FPS_SurviosCharacter::APP3_FPS_SurviosCharacter()
 
 	// Uncomment the following line to turn motion controllers on by default:
 	//bUsingMotionControllers = true;
+
+	primaryWeapon = nullptr;
 }
 
 void APP3_FPS_SurviosCharacter::BeginPlay()
@@ -119,6 +121,7 @@ void APP3_FPS_SurviosCharacter::SetupPlayerInputComponent(class UInputComponent*
 
 	// Bind fire event
 	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &APP3_FPS_SurviosCharacter::OnFire);
+	PlayerInputComponent->BindAction("Reload", IE_Pressed, this, &APP3_FPS_SurviosCharacter::ReloadWeapon);
 
 	// Enable touchscreen input
 	EnableTouchscreenMovement(PlayerInputComponent);
@@ -140,30 +143,47 @@ void APP3_FPS_SurviosCharacter::SetupPlayerInputComponent(class UInputComponent*
 
 void APP3_FPS_SurviosCharacter::OnFire()
 {
+	
 	// try and fire a projectile
 	if (ProjectileClass != nullptr)
 	{
 		UWorld* const World = GetWorld();
 		if (World != nullptr)
 		{
-			if (bUsingMotionControllers)
+			//checks if weapon exist
+			if (primaryWeapon)
 			{
-				const FRotator SpawnRotation = VR_MuzzleLocation->GetComponentRotation();
-				const FVector SpawnLocation = VR_MuzzleLocation->GetComponentLocation();
-				World->SpawnActor<APP3_FPS_SurviosProjectile>(ProjectileClass, SpawnLocation, SpawnRotation);
-			}
-			else
-			{
-				const FRotator SpawnRotation = GetControlRotation();
-				// MuzzleOffset is in camera space, so transform it to world space before offsetting from the character location to find the final muzzle position
-				const FVector SpawnLocation = ((FP_MuzzleLocation != nullptr) ? FP_MuzzleLocation->GetComponentLocation() : GetActorLocation()) + SpawnRotation.RotateVector(GunOffset);
+				//check the player has the ammo to fire
+				if (primaryWeapon->GetAmmoInClip() > 0)
+				{
+					if (bUsingMotionControllers)
+					{
+						const FRotator SpawnRotation = VR_MuzzleLocation->GetComponentRotation();
+						const FVector SpawnLocation = VR_MuzzleLocation->GetComponentLocation();
+						World->SpawnActor<APP3_FPS_SurviosProjectile>(ProjectileClass, SpawnLocation, SpawnRotation);
+					}
+					else
+					{
+						const FRotator SpawnRotation = GetControlRotation();
+						// MuzzleOffset is in camera space, so transform it to world space before offsetting from the character location to find the final muzzle position
+						const FVector SpawnLocation = ((FP_MuzzleLocation != nullptr) ? FP_MuzzleLocation->GetComponentLocation() : GetActorLocation()) + SpawnRotation.RotateVector(GunOffset);
 
-				//Set Spawn Collision Handling Override
-				FActorSpawnParameters ActorSpawnParams;
-				ActorSpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButDontSpawnIfColliding;
+						//Set Spawn Collision Handling Override
+						FActorSpawnParameters ActorSpawnParams;
+						ActorSpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButDontSpawnIfColliding;
 
-				// spawn the projectile at the muzzle
-				World->SpawnActor<APP3_FPS_SurviosProjectile>(ProjectileClass, SpawnLocation, SpawnRotation, ActorSpawnParams);
+						// spawn the projectile at the muzzle
+						World->SpawnActor<APP3_FPS_SurviosProjectile>(ProjectileClass, SpawnLocation, SpawnRotation, ActorSpawnParams);
+					}
+
+					//removes fired bullet from clip
+					int currentAmmo = primaryWeapon->GetAmmoInClip();
+					primaryWeapon->SetAmmoInClip(currentAmmo -= 1);
+				}
+				else if (primaryWeapon->GetAmmoOnPlayer() > 0) //make sure that we still have ammo on the player to use
+				{
+					ReloadWeapon();
+				}
 			}
 		}
 	}
@@ -297,4 +317,26 @@ bool APP3_FPS_SurviosCharacter::EnableTouchscreenMovement(class UInputComponent*
 	}
 	
 	return false;
+}
+
+void APP3_FPS_SurviosCharacter::ReloadWeapon()
+{
+	if (primaryWeapon)
+	{
+		if (primaryWeapon->GetAmmoInClip() != primaryWeapon->GetMaxAmmoInClip())
+		{
+			if (primaryWeapon->GetAmmoOnPlayer() - (primaryWeapon->GetMaxAmmoInClip() - primaryWeapon->GetAmmoInClip()) >= 0)
+			{
+				int newAmmo = primaryWeapon->GetAmmoOnPlayer() - (primaryWeapon->GetMaxAmmoInClip() - primaryWeapon->GetAmmoInClip());
+				primaryWeapon->SetAmmoOnPlayer(newAmmo);
+				primaryWeapon->SetAmmoInClip(primaryWeapon->GetMaxAmmoInClip());
+			}
+			else
+			{
+				int newAmmo = primaryWeapon->GetAmmoInClip() + primaryWeapon->GetAmmoOnPlayer();
+				primaryWeapon->SetAmmoInClip(newAmmo);
+				primaryWeapon->SetAmmoOnPlayer(0);
+			}
+		}
+	}
 }

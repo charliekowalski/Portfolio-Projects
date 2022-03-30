@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\PP3_FPS_Survios.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{BF823011-E80C-4303-8076-5706D133B05E}</UniqueIdentifier>
+      <UniqueIdentifier>{0DFF1C46-7AB6-4DC2-9FC7-E9658AABBC2A}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\PP3_FPS_Survios.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{36C3357D-41F2-476D-8180-317C82A8A062}</UniqueIdentifier>
+      <UniqueIdentifier>{844AC3F1-16BE-4E9B-9E18-C9C40231CDE5}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,8 +30,14 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\PP3_FPS_Survios">
-      <UniqueIdentifier>{02A7769E-926F-47FE-965D-9849DA412EF5}</UniqueIdentifier>
+      <UniqueIdentifier>{73759655-BB66-4D4B-B5D2-94CCE3D420D2}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\PP3_FPS_Survios\PP3_FPS_BaseWeapon.cpp">
+      <Filter>Source\PP3_FPS_Survios</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PP3_FPS_Survios\PP3_FPS_BaseWeapon.h">
+      <Filter>Source\PP3_FPS_Survios</Filter>
+    </ClInclude>
     <None Include="..\..\Source\PP3_FPS_Survios\PP3_FPS_Survios.Build.cs">
       <Filter>Source\PP3_FPS_Survios</Filter>
     </None>

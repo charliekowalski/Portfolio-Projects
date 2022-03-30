@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"C:\\Users\\charlie.kowalski\\Desktop\\CharlieKowalski\\Portfolio-Projects\\PP3_FPS_Survios\\Source\\PP3_FPS_Survios\\PP3_FPS_Survios.Build.cs",
-		"C:\\Users\\charlie.kowalski\\Desktop\\CharlieKowalski\\Portfolio-Projects\\PP3_FPS_Survios\\Source\\PP3_FPS_Survios.Target.cs",
-		"C:\\Users\\charlie.kowalski\\Desktop\\CharlieKowalski\\Portfolio-Projects\\PP3_FPS_Survios\\Source\\PP3_FPS_SurviosEditor.Target.cs"
+		"C:\\Users\\Charlie\\Desktop\\College\\PortfolioProjects\\PP3_FPS_Survios\\Source\\PP3_FPS_Survios\\PP3_FPS_Survios.Build.cs",
+		"C:\\Users\\Charlie\\Desktop\\College\\PortfolioProjects\\PP3_FPS_Survios\\Source\\PP3_FPS_Survios.Target.cs",
+		"C:\\Users\\Charlie\\Desktop\\College\\PortfolioProjects\\PP3_FPS_Survios\\Source\\PP3_FPS_SurviosEditor.Target.cs"
 	],
 	"EngineVersion": "4.27.2"
 }

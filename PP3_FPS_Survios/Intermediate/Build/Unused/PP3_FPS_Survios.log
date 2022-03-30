@@ -1,0 +1,24 @@
+﻿  Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Charlie\Desktop\College\PortfolioProjects).
+  Creating makefile for PP3_FPS_SurviosEditor (no existing makefile)
+  Parsing headers for PP3_FPS_SurviosEditor
+    Running UnrealHeaderTool "C:\Users\Charlie\Desktop\College\PortfolioProjects\PP3_FPS_Survios\PP3_FPS_Survios.uproject" "C:\Users\Charlie\Desktop\College\PortfolioProjects\PP3_FPS_Survios\Intermediate\Build\Win64\PP3_FPS_SurviosEditor\Development\PP3_FPS_SurviosEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\Charlie\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+  LogInit: Display: Loading text-based GConfig....
+  Reflection code generated for PP3_FPS_SurviosEditor in 4.6595636 seconds
+  Building PP3_FPS_SurviosEditor...
+  Using Visual Studio 2022 14.31.31104 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+  Building 11 actions with 8 processes...
+    [1/11] PP3_FPS_Survios.init.gen.cpp
+    [2/11] PP3_FPS_WeaponType.cpp
+    [3/11] PP3_FPS_SurviosGameMode.cpp
+    [4/11] PP3_FPS_BaseWeapon.cpp
+    [5/11] PP3_FPS_BaseWeapon.gen.cpp
+    [6/11] PP3_FPS_WeaponType.gen.cpp
+    [7/11] PP3_FPS_SurviosCharacter.gen.cpp
+    [8/11] PP3_FPS_SurviosCharacter.cpp
+    [9/11] UE4Editor-PP3_FPS_Survios-0003.lib
+       Creating library C:\Users\Charlie\Desktop\College\PortfolioProjects\PP3_FPS_Survios\Intermediate\Build\Win64\UE4Editor\Development\PP3_FPS_Survios\UE4Editor-PP3_FPS_Survios-0003.lib and object C:\Users\Charlie\Desktop\College\PortfolioProjects\PP3_FPS_Survios\Intermediate\Build\Win64\UE4Editor\Development\PP3_FPS_Survios\UE4Editor-PP3_FPS_Survios-0003.exp
+    [10/11] UE4Editor-PP3_FPS_Survios-0003.dll
+       Creating library C:\Users\Charlie\Desktop\College\PortfolioProjects\PP3_FPS_Survios\Intermediate\Build\Win64\UE4Editor\Development\PP3_FPS_Survios\UE4Editor-PP3_FPS_Survios-0003.suppressed.lib and object C:\Users\Charlie\Desktop\College\PortfolioProjects\PP3_FPS_Survios\Intermediate\Build\Win64\UE4Editor\Development\PP3_FPS_Survios\UE4Editor-PP3_FPS_Survios-0003.suppressed.exp
+    [11/11] PP3_FPS_SurviosEditor.target
+  Total time in Parallel executor: 14.53 seconds
+  Total execution time: 22.26 seconds

@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "PP3_FPS_BaseWeapon.h"
 #include "PP3_FPS_SurviosCharacter.generated.h"
 
 class UInputComponent;
@@ -86,6 +87,14 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
 	uint8 bUsingMotionControllers : 1;
 
+	//The Primary weapon
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Weapon)
+	APP3_FPS_BaseWeapon* primaryWeapon;
+
+	//Index of the current weapon
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Weapon)
+	int weaponIndex;
+
 protected:
 	
 	/** Fires a projectile. */
@@ -111,6 +120,9 @@ protected:
 	 * @param Rate	This is a normalized rate, i.e. 1.0 means 100% of desired turn rate
 	 */
 	void LookUpAtRate(float Rate);
+
+	//Reloads the weapon
+	void ReloadWeapon();
 
 	struct TouchData
 	{

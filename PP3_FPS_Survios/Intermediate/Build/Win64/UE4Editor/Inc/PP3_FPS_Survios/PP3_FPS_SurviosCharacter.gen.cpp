@@ -26,6 +26,7 @@ void EmptyLinkFunctionForGeneratedCodePP3_FPS_SurviosCharacter() {}
 	PP3_FPS_SURVIOS_API UClass* Z_Construct_UClass_APP3_FPS_SurviosProjectile_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
+	PP3_FPS_SURVIOS_API UClass* Z_Construct_UClass_APP3_FPS_BaseWeapon_NoRegister();
 // End Cross Module References
 	void APP3_FPS_SurviosCharacter::StaticRegisterNativesAPP3_FPS_SurviosCharacter()
 	{
@@ -101,6 +102,14 @@ void EmptyLinkFunctionForGeneratedCodePP3_FPS_SurviosCharacter() {}
 #endif
 		static void NewProp_bUsingMotionControllers_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bUsingMotionControllers;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_primaryWeapon_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_primaryWeapon;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_weaponIndex_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_weaponIndex;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -266,6 +275,24 @@ void EmptyLinkFunctionForGeneratedCodePP3_FPS_SurviosCharacter() {}
 		((APP3_FPS_SurviosCharacter*)Obj)->bUsingMotionControllers = 1;
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_APP3_FPS_SurviosCharacter_Statics::NewProp_bUsingMotionControllers = { "bUsingMotionControllers", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Bool , RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(uint8), sizeof(APP3_FPS_SurviosCharacter), &Z_Construct_UClass_APP3_FPS_SurviosCharacter_Statics::NewProp_bUsingMotionControllers_SetBit, METADATA_PARAMS(Z_Construct_UClass_APP3_FPS_SurviosCharacter_Statics::NewProp_bUsingMotionControllers_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APP3_FPS_SurviosCharacter_Statics::NewProp_bUsingMotionControllers_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APP3_FPS_SurviosCharacter_Statics::NewProp_primaryWeapon_MetaData[] = {
+		{ "Category", "Weapon" },
+		{ "Comment", "//The Primary weapon\n" },
+		{ "ModuleRelativePath", "PP3_FPS_SurviosCharacter.h" },
+		{ "ToolTip", "The Primary weapon" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APP3_FPS_SurviosCharacter_Statics::NewProp_primaryWeapon = { "primaryWeapon", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APP3_FPS_SurviosCharacter, primaryWeapon), Z_Construct_UClass_APP3_FPS_BaseWeapon_NoRegister, METADATA_PARAMS(Z_Construct_UClass_APP3_FPS_SurviosCharacter_Statics::NewProp_primaryWeapon_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APP3_FPS_SurviosCharacter_Statics::NewProp_primaryWeapon_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APP3_FPS_SurviosCharacter_Statics::NewProp_weaponIndex_MetaData[] = {
+		{ "Category", "Weapon" },
+		{ "Comment", "//Index of the current weapon\n" },
+		{ "ModuleRelativePath", "PP3_FPS_SurviosCharacter.h" },
+		{ "ToolTip", "Index of the current weapon" },
+	};
+#endif
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_APP3_FPS_SurviosCharacter_Statics::NewProp_weaponIndex = { "weaponIndex", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APP3_FPS_SurviosCharacter, weaponIndex), METADATA_PARAMS(Z_Construct_UClass_APP3_FPS_SurviosCharacter_Statics::NewProp_weaponIndex_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APP3_FPS_SurviosCharacter_Statics::NewProp_weaponIndex_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APP3_FPS_SurviosCharacter_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APP3_FPS_SurviosCharacter_Statics::NewProp_Mesh1P,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APP3_FPS_SurviosCharacter_Statics::NewProp_FP_Gun,
@@ -282,6 +309,8 @@ void EmptyLinkFunctionForGeneratedCodePP3_FPS_SurviosCharacter() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APP3_FPS_SurviosCharacter_Statics::NewProp_FireSound,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APP3_FPS_SurviosCharacter_Statics::NewProp_FireAnimation,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APP3_FPS_SurviosCharacter_Statics::NewProp_bUsingMotionControllers,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APP3_FPS_SurviosCharacter_Statics::NewProp_primaryWeapon,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APP3_FPS_SurviosCharacter_Statics::NewProp_weaponIndex,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_APP3_FPS_SurviosCharacter_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<APP3_FPS_SurviosCharacter>::IsAbstract,
@@ -310,7 +339,7 @@ void EmptyLinkFunctionForGeneratedCodePP3_FPS_SurviosCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APP3_FPS_SurviosCharacter, 3278623369);
+	IMPLEMENT_CLASS(APP3_FPS_SurviosCharacter, 950546037);
 	template<> PP3_FPS_SURVIOS_API UClass* StaticClass<APP3_FPS_SurviosCharacter>()
 	{
 		return APP3_FPS_SurviosCharacter::StaticClass();
