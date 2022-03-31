@@ -60,8 +60,6 @@ public: \
 
 #define PP3_FPS_Survios_Source_PP3_FPS_Survios_PP3_FPS_SurviosCharacter_h_21_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__Mesh1P() { return STRUCT_OFFSET(APP3_FPS_SurviosCharacter, Mesh1P); } \
-	FORCEINLINE static uint32 __PPO__FP_Gun() { return STRUCT_OFFSET(APP3_FPS_SurviosCharacter, FP_Gun); } \
-	FORCEINLINE static uint32 __PPO__FP_MuzzleLocation() { return STRUCT_OFFSET(APP3_FPS_SurviosCharacter, FP_MuzzleLocation); } \
 	FORCEINLINE static uint32 __PPO__VR_Gun() { return STRUCT_OFFSET(APP3_FPS_SurviosCharacter, VR_Gun); } \
 	FORCEINLINE static uint32 __PPO__VR_MuzzleLocation() { return STRUCT_OFFSET(APP3_FPS_SurviosCharacter, VR_MuzzleLocation); } \
 	FORCEINLINE static uint32 __PPO__FirstPersonCameraComponent() { return STRUCT_OFFSET(APP3_FPS_SurviosCharacter, FirstPersonCameraComponent); } \

@@ -3,22 +3,38 @@
   Parsing headers for PP3_FPS_SurviosEditor
     Running UnrealHeaderTool "C:\Users\Charlie\Desktop\College\PortfolioProjects\PP3_FPS_Survios\PP3_FPS_Survios.uproject" "C:\Users\Charlie\Desktop\College\PortfolioProjects\PP3_FPS_Survios\Intermediate\Build\Win64\PP3_FPS_SurviosEditor\Development\PP3_FPS_SurviosEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\Charlie\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
   LogInit: Display: Loading text-based GConfig....
-  Reflection code generated for PP3_FPS_SurviosEditor in 4.6595636 seconds
+  Reflection code generated for PP3_FPS_SurviosEditor in 4.7172093 seconds
   Building PP3_FPS_SurviosEditor...
   Using Visual Studio 2022 14.31.31104 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 11 actions with 8 processes...
-    [1/11] PP3_FPS_Survios.init.gen.cpp
-    [2/11] PP3_FPS_WeaponType.cpp
-    [3/11] PP3_FPS_SurviosGameMode.cpp
-    [4/11] PP3_FPS_BaseWeapon.cpp
-    [5/11] PP3_FPS_BaseWeapon.gen.cpp
-    [6/11] PP3_FPS_WeaponType.gen.cpp
-    [7/11] PP3_FPS_SurviosCharacter.gen.cpp
-    [8/11] PP3_FPS_SurviosCharacter.cpp
-    [9/11] UE4Editor-PP3_FPS_Survios-0003.lib
-       Creating library C:\Users\Charlie\Desktop\College\PortfolioProjects\PP3_FPS_Survios\Intermediate\Build\Win64\UE4Editor\Development\PP3_FPS_Survios\UE4Editor-PP3_FPS_Survios-0003.lib and object C:\Users\Charlie\Desktop\College\PortfolioProjects\PP3_FPS_Survios\Intermediate\Build\Win64\UE4Editor\Development\PP3_FPS_Survios\UE4Editor-PP3_FPS_Survios-0003.exp
-    [10/11] UE4Editor-PP3_FPS_Survios-0003.dll
-       Creating library C:\Users\Charlie\Desktop\College\PortfolioProjects\PP3_FPS_Survios\Intermediate\Build\Win64\UE4Editor\Development\PP3_FPS_Survios\UE4Editor-PP3_FPS_Survios-0003.suppressed.lib and object C:\Users\Charlie\Desktop\College\PortfolioProjects\PP3_FPS_Survios\Intermediate\Build\Win64\UE4Editor\Development\PP3_FPS_Survios\UE4Editor-PP3_FPS_Survios-0003.suppressed.exp
-    [11/11] PP3_FPS_SurviosEditor.target
-  Total time in Parallel executor: 14.53 seconds
-  Total execution time: 22.26 seconds
+  Building 7 actions with 8 processes...
+    [1/7] PP3_FPS_Survios.init.gen.cpp
+    [2/7] PP3_FPS_Rifle.cpp
+    [3/7] PP3_FPS_Rifle.gen.cpp
+    [4/7] PP3_FPS_SurviosCharacter.cpp
+C:\Users\Charlie\Desktop\College\PortfolioProjects\PP3_FPS_Survios\Source\PP3_FPS_Survios\PP3_FPS_SurviosCharacter.cpp(193): error C2664: 'void FTimerManager::SetTimer<APP3_FPS_SurviosCharacter>(FTimerHandle &,UserClass *,void (__cdecl APP3_FPS_SurviosCharacter::* )(void),float,bool,float)': cannot convert argument 3 from 'void' to 'void (__cdecl APP3_FPS_SurviosCharacter::* )(void)'
+            with
+            [
+                UserClass=APP3_FPS_SurviosCharacter
+            ]
+    C:\Users\Charlie\Desktop\College\PortfolioProjects\PP3_FPS_Survios\Source\PP3_FPS_Survios\PP3_FPS_SurviosCharacter.cpp(193): note: Expressions of type void cannot be converted to other types
+    F:\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Public\TimerManager.h(191): note: see declaration of 'FTimerManager::SetTimer'
+C:\Users\Charlie\Desktop\College\PortfolioProjects\PP3_FPS_Survios\Source\PP3_FPS_Survios\PP3_FPS_SurviosCharacter.cpp(232): error C2601: 'APP3_FPS_SurviosCharacter::OnResetVR': local function definitions are illegal
+    C:\Users\Charlie\Desktop\College\PortfolioProjects\PP3_FPS_Survios\Source\PP3_FPS_Survios\PP3_FPS_SurviosCharacter.cpp(219): note: this line contains a '{' which has not yet been matched
+C:\Users\Charlie\Desktop\College\PortfolioProjects\PP3_FPS_Survios\Source\PP3_FPS_Survios\PP3_FPS_SurviosCharacter.cpp(237): error C2601: 'APP3_FPS_SurviosCharacter::BeginTouch': local function definitions are illegal
+    C:\Users\Charlie\Desktop\College\PortfolioProjects\PP3_FPS_Survios\Source\PP3_FPS_Survios\PP3_FPS_SurviosCharacter.cpp(219): note: this line contains a '{' which has not yet been matched
+C:\Users\Charlie\Desktop\College\PortfolioProjects\PP3_FPS_Survios\Source\PP3_FPS_Survios\PP3_FPS_SurviosCharacter.cpp(253): error C2601: 'APP3_FPS_SurviosCharacter::EndTouch': local function definitions are illegal
+    C:\Users\Charlie\Desktop\College\PortfolioProjects\PP3_FPS_Survios\Source\PP3_FPS_Survios\PP3_FPS_SurviosCharacter.cpp(219): note: this line contains a '{' which has not yet been matched
+C:\Users\Charlie\Desktop\College\PortfolioProjects\PP3_FPS_Survios\Source\PP3_FPS_Survios\PP3_FPS_SurviosCharacter.cpp(300): error C2601: 'APP3_FPS_SurviosCharacter::MoveForward': local function definitions are illegal
+    C:\Users\Charlie\Desktop\College\PortfolioProjects\PP3_FPS_Survios\Source\PP3_FPS_Survios\PP3_FPS_SurviosCharacter.cpp(219): note: this line contains a '{' which has not yet been matched
+C:\Users\Charlie\Desktop\College\PortfolioProjects\PP3_FPS_Survios\Source\PP3_FPS_Survios\PP3_FPS_SurviosCharacter.cpp(309): error C2601: 'APP3_FPS_SurviosCharacter::MoveRight': local function definitions are illegal
+    C:\Users\Charlie\Desktop\College\PortfolioProjects\PP3_FPS_Survios\Source\PP3_FPS_Survios\PP3_FPS_SurviosCharacter.cpp(219): note: this line contains a '{' which has not yet been matched
+C:\Users\Charlie\Desktop\College\PortfolioProjects\PP3_FPS_Survios\Source\PP3_FPS_Survios\PP3_FPS_SurviosCharacter.cpp(318): error C2601: 'APP3_FPS_SurviosCharacter::TurnAtRate': local function definitions are illegal
+    C:\Users\Charlie\Desktop\College\PortfolioProjects\PP3_FPS_Survios\Source\PP3_FPS_Survios\PP3_FPS_SurviosCharacter.cpp(219): note: this line contains a '{' which has not yet been matched
+C:\Users\Charlie\Desktop\College\PortfolioProjects\PP3_FPS_Survios\Source\PP3_FPS_Survios\PP3_FPS_SurviosCharacter.cpp(324): error C2601: 'APP3_FPS_SurviosCharacter::LookUpAtRate': local function definitions are illegal
+    C:\Users\Charlie\Desktop\College\PortfolioProjects\PP3_FPS_Survios\Source\PP3_FPS_Survios\PP3_FPS_SurviosCharacter.cpp(219): note: this line contains a '{' which has not yet been matched
+C:\Users\Charlie\Desktop\College\PortfolioProjects\PP3_FPS_Survios\Source\PP3_FPS_Survios\PP3_FPS_SurviosCharacter.cpp(330): error C2601: 'APP3_FPS_SurviosCharacter::EnableTouchscreenMovement': local function definitions are illegal
+    C:\Users\Charlie\Desktop\College\PortfolioProjects\PP3_FPS_Survios\Source\PP3_FPS_Survios\PP3_FPS_SurviosCharacter.cpp(219): note: this line contains a '{' which has not yet been matched
+C:\Users\Charlie\Desktop\College\PortfolioProjects\PP3_FPS_Survios\Source\PP3_FPS_Survios\PP3_FPS_SurviosCharacter.cpp(345): error C2601: 'APP3_FPS_SurviosCharacter::ReloadWeapon': local function definitions are illegal
+    C:\Users\Charlie\Desktop\College\PortfolioProjects\PP3_FPS_Survios\Source\PP3_FPS_Survios\PP3_FPS_SurviosCharacter.cpp(219): note: this line contains a '{' which has not yet been matched
+C:\Users\Charlie\Desktop\College\PortfolioProjects\PP3_FPS_Survios\Source\PP3_FPS_Survios\PP3_FPS_SurviosCharacter.cpp(219): fatal error C1075: '{': no matching token found
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.MakeFile.Targets(44,5): error MSB3073: The command ""F:\Epic Games\UE_4.27\Engine\Build\BatchFiles\Build.bat" PP3_FPS_SurviosEditor Win64 Development -Project="C:\Users\Charlie\Desktop\College\PortfolioProjects\PP3_FPS_Survios\PP3_FPS_Survios.uproject" -WaitMutex -FromMsBuild" exited with code 6.

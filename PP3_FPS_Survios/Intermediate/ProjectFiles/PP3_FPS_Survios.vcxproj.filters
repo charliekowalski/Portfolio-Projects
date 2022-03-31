@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\PP3_FPS_Survios.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{0DFF1C46-7AB6-4DC2-9FC7-E9658AABBC2A}</UniqueIdentifier>
+      <UniqueIdentifier>{19AA8958-11F9-4BF9-A081-BDC71DF5326D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\PP3_FPS_Survios.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{844AC3F1-16BE-4E9B-9E18-C9C40231CDE5}</UniqueIdentifier>
+      <UniqueIdentifier>{610BAFE6-0FEB-4C27-92C9-14FDC6181DE6}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,12 +30,30 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\PP3_FPS_Survios">
-      <UniqueIdentifier>{73759655-BB66-4D4B-B5D2-94CCE3D420D2}</UniqueIdentifier>
+      <UniqueIdentifier>{F61545FE-052D-41AB-ACA5-E4970E70F3A9}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\PP3_FPS_Survios\BP_HitscanWeapon__pf530240775.cpp">
+      <Filter>Source\PP3_FPS_Survios</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PP3_FPS_Survios\BP_HitscanWeapon__pf530240775.h">
+      <Filter>Source\PP3_FPS_Survios</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\PP3_FPS_Survios\PP3_FPS_BaseWeapon.cpp">
       <Filter>Source\PP3_FPS_Survios</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\PP3_FPS_Survios\PP3_FPS_BaseWeapon.h">
+      <Filter>Source\PP3_FPS_Survios</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\PP3_FPS_Survios\PP3_FPS_GrenadeLauncher.cpp">
+      <Filter>Source\PP3_FPS_Survios</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PP3_FPS_Survios\PP3_FPS_GrenadeLauncher.h">
+      <Filter>Source\PP3_FPS_Survios</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\PP3_FPS_Survios\PP3_FPS_Rifle.cpp">
+      <Filter>Source\PP3_FPS_Survios</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PP3_FPS_Survios\PP3_FPS_Rifle.h">
       <Filter>Source\PP3_FPS_Survios</Filter>
     </ClInclude>
     <None Include="..\..\Source\PP3_FPS_Survios\PP3_FPS_Survios.Build.cs">
@@ -69,6 +87,12 @@
       <Filter>Source\PP3_FPS_Survios</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\PP3_FPS_Survios\PP3_FPS_SurviosProjectile.h">
+      <Filter>Source\PP3_FPS_Survios</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\PP3_FPS_Survios\PP3_FPS_WeaponType.cpp">
+      <Filter>Source\PP3_FPS_Survios</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PP3_FPS_Survios\PP3_FPS_WeaponType.h">
       <Filter>Source\PP3_FPS_Survios</Filter>
     </ClInclude>
   </ItemGroup>

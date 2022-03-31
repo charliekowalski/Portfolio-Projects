@@ -21,8 +21,8 @@ void EmptyLinkFunctionForGeneratedCodePP3_FPS_Survios_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x72640350,
-				0x10B1B336,
+				0x7A644E1D,
+				0x3DE0EC39,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

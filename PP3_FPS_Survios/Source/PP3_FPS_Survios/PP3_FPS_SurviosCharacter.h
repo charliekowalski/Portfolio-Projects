@@ -24,14 +24,6 @@ class APP3_FPS_SurviosCharacter : public ACharacter
 	UPROPERTY(VisibleDefaultsOnly, Category=Mesh)
 	USkeletalMeshComponent* Mesh1P;
 
-	/** Gun mesh: 1st person view (seen only by self) */
-	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
-	USkeletalMeshComponent* FP_Gun;
-
-	/** Location on gun mesh where projectiles should spawn. */
-	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
-	USceneComponent* FP_MuzzleLocation;
-
 	/** Gun mesh: VR view (attached to the VR controller directly, no arm, just the actual gun) */
 	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
 	USkeletalMeshComponent* VR_Gun;
@@ -67,10 +59,6 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseLookUpRate;
 
-	/** Gun muzzle's offset from the characters location */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Gameplay)
-	FVector GunOffset;
-
 	/** Projectile class to spawn */
 	UPROPERTY(EditDefaultsOnly, Category=Projectile)
 	TSubclassOf<class APP3_FPS_SurviosProjectile> ProjectileClass;
@@ -91,14 +79,17 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Weapon)
 	APP3_FPS_BaseWeapon* primaryWeapon;
 
-	//Index of the current weapon
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Weapon)
-	int weaponIndex;
+		int weaponIndex;
 
 protected:
 	
+	void StartFire();
+
 	/** Fires a projectile. */
-	void OnFire();
+	void FireShot();
+
+	void StopFire();
 
 	/** Resets HMD orientation and position in VR. */
 	void OnResetVR();
@@ -149,6 +140,8 @@ protected:
 	 * @returns true if touch controls were enabled.
 	 */
 	bool EnableTouchscreenMovement(UInputComponent* InputComponent);
+
+	FTimerHandle Timer_Reload;
 
 public:
 	/** Returns Mesh1P subobject **/

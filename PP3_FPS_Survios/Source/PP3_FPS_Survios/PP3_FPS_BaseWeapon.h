@@ -24,6 +24,18 @@ public:
 	// Sets default values for this actor's properties
 	APP3_FPS_BaseWeapon();
 
+	//The weapons Skeleton mesh
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Mesh)
+		USkeletalMeshComponent* FP_Gun;
+
+	/** Location on gun mesh where projectiles should spawn. */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Mesh)
+		USceneComponent* FP_MuzzleLocation;
+
+	/** Gun muzzle's offset from the characters location */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
+		FVector GunOffset;
+
 	//The current type of weapon
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Weapon)
 		WeaponType weaponType;
@@ -48,6 +60,19 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Weapon)
 		float reloadSpeed;
 
+	//The reload speed of the gun
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Weapon)
+		float timeBetweenShots;
+
+	USkeletalMeshComponent* GetSkeletalMesh() const { return FP_Gun; };
+	void SetSkeletonMesh(USkeletalMeshComponent* newSkeletonMesh) { FP_Gun = newSkeletonMesh; };
+
+	USceneComponent* GetMuzzleLocation() const { return FP_MuzzleLocation; };
+	void SetMuzzleLocation(USceneComponent* newMuzzleLocation) { FP_MuzzleLocation = newMuzzleLocation; };
+
+	FVector GetGunOffset() { return GunOffset; };
+	void SetGunOffset(FVector newGunOffset) { GunOffset = newGunOffset; };
+
 	WeaponType GetWeaponType() { return weaponType; };
 	void SetWeaponType(WeaponType newWeaponType) { weaponType = newWeaponType; };
 
@@ -65,6 +90,9 @@ public:
 
 	float GetReloadSpeed() { return reloadSpeed; };
 	void SetReloadSpeed(float newReloadSpeed) { reloadSpeed = newReloadSpeed; }
+
+	float GetTimeBetweenShots() { return timeBetweenShots; };
+	void SetTimeBetweenShots(float newTimeBetweenShots) { timeBetweenShots = newTimeBetweenShots; };
 
 protected:
 	// Called when the game starts or when spawned
