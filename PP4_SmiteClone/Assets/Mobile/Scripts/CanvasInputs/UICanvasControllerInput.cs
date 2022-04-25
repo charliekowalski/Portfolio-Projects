@@ -27,7 +27,26 @@ namespace StarterAssets
         {
             starterAssetsInputs.SprintInput(virtualSprintState);
         }
-        
+
+        public void VirtualAbilityOneInput(bool virtualAbilityOneState)
+        {
+            starterAssetsInputs.AbilityOneInput(virtualAbilityOneState);
+        }
+
+        public void VirtualAbilityTwoInput(bool virtualAbilityTwoState)
+        {
+            starterAssetsInputs.AbilityTwoInput(virtualAbilityTwoState);
+        }
+
+        public void VirtualAbilityThreeInput(bool virtualAbilityThreeState)
+        {
+            starterAssetsInputs.AbilityThreeInput(virtualAbilityThreeState);
+        }
+
+        public void VirtualUltimateAbilityInput(bool virtualUltimateAbilityState)
+        {
+            starterAssetsInputs.UltimateAbilityInput(virtualUltimateAbilityState);
+        }
     }
 
 }

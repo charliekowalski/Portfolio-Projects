@@ -12,6 +12,10 @@ namespace StarterAssets
 		public Vector2 look;
 		public bool jump;
 		public bool sprint;
+		public bool abilityOne;
+		public bool abilityTwo;
+		public bool abilityThree;
+		public bool ultimateAbility;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -45,6 +49,26 @@ namespace StarterAssets
 		{
 			SprintInput(value.isPressed);
 		}
+		public void OnAbilityOne(InputValue value)
+		{
+			AbilityOneInput(value.isPressed);
+		}
+
+		public void OnAbilityTwo(InputValue value)
+		{
+			AbilityTwoInput(value.isPressed);
+		}
+
+		public void OnAbilityThree(InputValue value)
+		{
+			AbilityThreeInput(value.isPressed);
+		}
+
+		public void OnUltimateAbility(InputValue value)
+		{
+			UltimateAbilityInput(value.isPressed);
+		}
+
 #else
 	// old input sys if we do decide to have it (most likely wont)...
 #endif
@@ -69,6 +93,27 @@ namespace StarterAssets
 		{
 			sprint = newSprintState;
 		}
+
+		public void AbilityOneInput(bool newAbilityOneState)
+		{
+			abilityOne = newAbilityOneState;
+		}
+
+		public void AbilityTwoInput(bool newAbilityTwoState)
+		{
+			abilityTwo = newAbilityTwoState;
+		}
+
+		public void AbilityThreeInput(bool newAbilityThreeState)
+		{
+			abilityThree = newAbilityThreeState;
+		}
+
+		public void UltimateAbilityInput(bool newUltimateAbilityState)
+		{
+			ultimateAbility = newUltimateAbilityState;
+		}
+
 
 #if !UNITY_IOS || !UNITY_ANDROID
 
