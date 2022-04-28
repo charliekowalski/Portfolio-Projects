@@ -204,6 +204,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1aacdcd1f04f304d8070f2accd3c7ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  abilitiesVisuals:
+  - {fileID: 3156655179500675228, guid: bf2ee4ac8a5608242a8264955bcf7149, type: 3}
+  - {fileID: 6140043337483319286, guid: 7862cd80195df044f8c4ed1673773809, type: 3}
+  - {fileID: 7124607086281088278, guid: bede2822428ec5e499c95f9244258427, type: 3}
+  - {fileID: 1197994378017955829, guid: 317fb1661b8cf2d499efcab22b9e282a, type: 3}
 --- !u!4 &700051398 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8338988566280778637, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
